@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = "all\ function.o"
-LINKOBJ  = "all function.o"
+OBJ      = "all\ function.o" Untitled3.o game_fuction.o
+LINKOBJ  = "all function.o" Untitled3.o game_fuction.o
 LIBS     = -L"C:/C/Dev-Cpp/MinGW64/lib" -L"C:/C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/C/Dev-Cpp/MinGW64/include" -I"C:/C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/C/Dev-Cpp/MinGW64/include" -I"C:/C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -26,3 +26,6 @@ $(BIN): $(OBJ)
 
 "all\ function.o": all\ function.c
 	$(CC) -c "all function.c" -o "all function.o" $(CFLAGS)
+
+game_fuction.o: game_fuction.c
+	$(CC) -c game_fuction.c -o game_fuction.o $(CFLAGS)
