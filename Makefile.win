@@ -1,15 +1,15 @@
-# Project: real backjack
+# Project: game_fuction
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = "all\ function.o" Untitled3.o game_fuction.o
-LINKOBJ  = "all function.o" Untitled3.o game_fuction.o
+OBJ      = main.o play_game.o
+LINKOBJ  = main.o play_game.o
 LIBS     = -L"C:/C/Dev-Cpp/MinGW64/lib" -L"C:/C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/C/Dev-Cpp/MinGW64/include" -I"C:/C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/C/Dev-Cpp/MinGW64/include" -I"C:/C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = "real backjack.exe"
+BIN      = game_fuction.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,8 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-"all\ function.o": all\ function.c
-	$(CC) -c "all function.c" -o "all function.o" $(CFLAGS)
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
 
-game_fuction.o: game_fuction.c
-	$(CC) -c game_fuction.c -o game_fuction.o $(CFLAGS)
+play_game.o: play_game.c
+	$(CC) -c play_game.c -o play_game.o $(CFLAGS)
